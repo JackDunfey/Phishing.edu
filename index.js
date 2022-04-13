@@ -10,11 +10,12 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(require("cookie-parser")());
 app.use("/static",express.static(path.join(__dirname,"/public")));
+app.set("view engine", "pug")
 app.get("/",(req,res)=>{
     res.redirect("/recovery");
 });
 app.get("/recovery",(req,res)=>{
-    res.sendFile(path.join(__dirname,"/sites/index.html"));
+    res.render("index")
 });
 app.put("/newb",(req,res)=>{
     if(!req.body.info) return res.sendStatus(400);

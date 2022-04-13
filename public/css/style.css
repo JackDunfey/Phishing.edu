@@ -1,0 +1,105 @@
+:root {
+    --background: #e9ebee;
+    --fblue: #1876f2;
+    --footerbg: #f2f2f2;
+    --fbtextfocus: #bec3ca;
+}
+body{
+    background-color: var(--background);
+    font-family: Helvetica, Arial, sans-serif;
+}
+body, html{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: white;
+}
+li{
+    list-style-type: none;
+    margin: 0px;
+    display: inline-block;
+}
+li:not(:first-child){
+    margin-left: 5px;
+}
+li span.a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.custom-btn{
+    background-color: var(--fblue);
+    font-weight: bold;
+}
+.borderless li{
+    border: none;
+}
+.no-outline{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.phonebtn{
+    background-color: #4267b2;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+.footer{
+    font-size: 12px;
+}
+.card{
+    font-size: 12px;
+    /* width: 45%; */ width: 557px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #bbb;
+}
+.card-title{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 0px;
+    width: 95%;
+    margin: auto;
+    padding: 6px 9px;
+    border-bottom: 1px solid #ccc;
+}
+.msg{
+    text-indent: 5px;
+}
+.card-footer{
+    background-color: var(--footerbg);
+}
+input{
+    border: 1px solid #ddd;
+}
+input.invalid{
+    border: 1px solid red;
+}
+input:focus{ 
+    box-shadow: none;
+    outline: none;
+}
+input:focus::placeholder{
+    /* color: #757575; DEFAULT */
+    color: var(--fbtextfocus);
+}
+.logobrand{
+    fill: var(--fblue);
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+.logobrand:hover{
+    fill: red;
+    cursor: pointer;
+}

